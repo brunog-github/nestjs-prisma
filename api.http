@@ -11,9 +11,10 @@ POST http://localhost:3000/articles
 Content-Type: application/json
 
 {
-    "title": "O Melhor Anime do Mundoooo!",
-    "description": "Naruto",
-    "body": "Anime que marcou a infância de muitas crianças."
+  "title": "example-title1222",
+  "description": "example-description",
+  "body": "example-body",
+  "published": true
 }
 
 ###
@@ -23,3 +24,6 @@ Content-Type: application/json
 {
     "title": "Java não é Javascript."
 }
+
+###
+DELETE http://localhost:3000/articles/clppqz2hm0000109aa2yerz5s

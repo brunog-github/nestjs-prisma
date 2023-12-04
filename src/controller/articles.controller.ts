@@ -6,6 +6,8 @@ import {
   Patch,
   Param,
   Delete,
+  HttpCode,
+  HttpStatus,
 } from '@nestjs/common';
 import { ArticlesService } from '../service/articles.service';
 import { CreateArticleDto } from '../domain/dto/create-article.dto';
@@ -54,6 +56,7 @@ export class ArticlesController {
   }
 
   @ApiNoContentResponse({ type: ArticleEntity })
+  @HttpCode(HttpStatus.NO_CONTENT)
   @Delete(':id')
   remove(@Param('id') id: string) {
     return this.articlesService.remove(id);
