@@ -4,7 +4,7 @@ GET http://localhost:3000/articles
 GET http://localhost:3000/articles/drafts
 
 ###
-GET http://localhost:3000/articles/clppqz2ia0001109axf9nq3sj
+GET http://localhost:3000/articles/5757845
 
 ###
 POST http://localhost:3000/articles
@@ -18,7 +18,7 @@ Content-Type: application/json
 }
 
 ###
-PATCH http://localhost:3000/articles/clppqz2ia0001109axf9nq3sj
+PATCH http://localhost:3000/articles/5757845
 Content-Type: application/json
 
 {
@@ -26,4 +26,4 @@ Content-Type: application/json
 }
 
 ###
-DELETE http://localhost:3000/articles/clppqz2hm0000109aa2yerz5s
+DELETE http://localhost:3000/articles/5757845

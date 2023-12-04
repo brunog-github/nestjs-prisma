@@ -8,6 +8,7 @@ import {
   Delete,
   HttpCode,
   HttpStatus,
+  NotFoundException,
 } from '@nestjs/common';
 import { ArticlesService } from '../service/articles.service';
 import { CreateArticleDto } from '../domain/dto/create-article.dto';
