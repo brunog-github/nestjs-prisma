@@ -4,7 +4,7 @@ GET http://localhost:3000/articles
 GET http://localhost:3000/articles/drafts
 
 ###
-GET http://localhost:3000/articles/5757845
+GET http://localhost:3000/articles/clprmteiw000584vds0b9zrpz
 
 ###
 POST http://localhost:3000/articles

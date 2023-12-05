@@ -27,38 +27,47 @@ export class ArticlesController {
 
   @ApiCreatedResponse({ type: ArticleEntity })
   @Post()
-  create(@Body() createArticleDto: CreateArticleDto) {
-    return this.articlesService.create(createArticleDto);
+  async create(@Body() createArticleDto: CreateArticleDto) {
+    return new ArticleEntity(
+      await this.articlesService.create(createArticleDto),
+    );
   }
 
   @ApiOkResponse({ type: ArticleEntity, isArray: true })
   @Get()
-  findAll() {
-    return this.articlesService.findAll();
+  async findAll() {
+    const articles = await this.articlesService.findAll();
+    return articles.map((article) => new ArticleEntity(article));
   }
 
   @ApiOkResponse({ type: ArticleEntity, isArray: true })
   @Get('/drafts')
-  findAllDrafts() {
-    return this.articlesService.findAllDrafts();
+  async findAllDrafts() {
+    const drafts = await this.articlesService.findAllDrafts();
+    return drafts.map((draft) => new ArticleEntity(draft));
   }
 
   @ApiOkResponse({ type: ArticleEntity })
   @Get(':id')
-  findOne(@Param('id') id: string) {
-    return this.articlesService.findOne(id);
+  async findOne(@Param('id') id: string) {
+    return new ArticleEntity(await this.articlesService.findOne(id));
   }
 
   @ApiOkResponse({ type: ArticleEntity })
   @Patch(':id')
-  update(@Param('id') id: string, @Body() updateArticleDto: UpdateArticleDto) {
-    return this.articlesService.update(id, updateArticleDto);
+  async update(
+    @Param('id') id: string,
+    @Body() updateArticleDto: UpdateArticleDto,
+  ) {
+    return new ArticleEntity(
+      await this.articlesService.update(id, updateArticleDto),
+    );
   }
 
   @ApiNoContentResponse({ type: ArticleEntity })
   @HttpCode(HttpStatus.NO_CONTENT)
   @Delete(':id')
-  remove(@Param('id') id: string) {
-    return this.articlesService.remove(id);
+  async remove(@Param('id') id: string) {
+    return new ArticleEntity(await this.articlesService.remove(id));
   }
 }

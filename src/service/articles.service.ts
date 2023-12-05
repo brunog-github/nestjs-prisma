@@ -24,8 +24,9 @@ export class ArticlesService {
   }
 
   findOne(id: string) {
-    return this.prismaService.article.findUniqueOrThrow({
+    return this.prismaService.article.findUnique({
       where: { id },
+      include: { User: true },
     });
   }
 

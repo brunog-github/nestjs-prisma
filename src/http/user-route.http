@@ -1,0 +1,28 @@
+GET http://localhost:3000/users
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJjbHBzajQzM3MwMDAxcmQyZHY1cDQwcXZmIiwiaWF0IjoxNzAxNzkyMTczLCJleHAiOjE3MDE3OTIyOTN9.pPlEGMlPFqW9apn8fGymZsqyJztkTvHaQzc6c_V1e5Y
+
+### 
+GET http://localhost:3000/users/clprmtein000184vd0lfciz6v
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJjbHBzajQzM3MwMDAxcmQyZHY1cDQwcXZmIiwiaWF0IjoxNzAxNzkyMTczLCJleHAiOjE3MDE3OTIyOTN9.pPlEGMlPFqW9apn8fGymZsqyJztkTvHaQzc6c_V1e5Y
+
+###
+POST http://localhost:3000/users
+Content-Type: application/json
+
+{
+  "name": "bruno",
+  "email": "bruno2@gmail.com",
+  "password": "test458"
+}
+
+###
+PATCH http://localhost:3000/users/clprl9m200001vypizbhix4nr
+Content-Type: application/json
+
+{
+    "name": "John Doe"
+}
+
+###
+DELETE http://localhost:3000/users/clpshid020000c61jqwfcax9s
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJjbHBzajQzM3MwMDAxcmQyZHY1cDQwcXZmIiwiaWF0IjoxNzAxNzkyMTczLCJleHAiOjE3MDE3OTIyOTN9.pPlEGMlPFqW9apn8fGymZsqyJztkTvHaQzc6c_V1e5Y
