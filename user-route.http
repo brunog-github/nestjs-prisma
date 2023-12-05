@@ -9,7 +9,7 @@ Content-Type: application/json
 
 {
   "name": "bruno",
-  "email": "bruno@gmail.com",
+  "email": "bruno2@gmail.com",
   "password": "example-body"
 }
 
@@ -22,4 +22,4 @@ Content-Type: application/json
 }
 
 ###
-DELETE http://localhost:3000/users/clprl9m200001vypizbhix4nr
+DELETE http://localhost:3000/users/clprm662v000011x8pe2gn930
